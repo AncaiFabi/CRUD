@@ -1,59 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRUD</title>
-    <link rel="stylesheet" href="style.css" />
-    <script text="text/javascript" src="script.js"></script>
-  </head>
-  <body>
-    <form class="form">
-      <p class="title">Registrar personagem</p>
-      <p class="message">Insira os dados do héroi para cadastrá-lo</p>
 
-      <div class="flex">
-        <label>
-          <input
-            required
-            placeholder=""
-            type="text"
-            class="input"
-            style="width: 110px"
-          />
-          <span>Nome</span>
-          <label> </label>
-        </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer text="text/javascript" src="script.js"></script>
+</head>
 
-        <label>
-          <input
-            required
-            placeholder=""
-            type="text"
-            class="input"
-            style="width: 110px"
-          />
-          <span>Sobrenome</span>
-        </label>
-      </div>
+<body>
+  <form class="form">
+    <p class="title">Registrar personagem</p>
+    <p class="message">Insira os dados do héroi para cadastrá-lo</p>
+
+    <div class="flex">
       <label>
-        <input required placeholder="" type="text" class="input" />
-        <span>Fantasia</span>
-      </label>
-      <label>
-        <input required placeholder="" type="text" class="input" />
-        <span>Local</span>
+        <input required placeholder="" type="text" class="input" style="width: 110px" id="nome" onchange="addNome()" />
+        <span>Nome</span>
+        <label> </label>
       </label>
 
-      <button class="submit">Cadastrar</button>
-    </form>
+      <label>
+        <input required placeholder="" type="text" class="input" style="width: 110px" id="sobrenome"
+          onchange="addSobrenome()" />
+        <span>Sobrenome</span>
+      </label>
+    </div>
+    <label>
+      <input required placeholder="" type="text" class="input" id="fantasia" onchange="addFantasia()" />
+      <span>Fantasia</span>
+    </label>
+    <label>
+      <input required placeholder="" type="text" class="input" id="local" onchange="addLocal()" />
+      <span>Local</span>
+    </label>
 
-    <div class="tabela">
-      <p class="title" style="margin:0">Tabela de Heróis</p>
+    <button class="submit">Cadastrar</button>
+  </form>
+
+  <div class="tabela">
+    <p class="title" style="margin:0">Tabela de Heróis</p>
     <table border="1">
       <tr>
-        <th>Nome</th>    
+        <th>Nome</th>
         <th>Sobrenome</th>
         <th>Fantasia</th>
         <th>Local</th>
@@ -65,29 +56,40 @@
       <td>Homem Aranha</td>
       <td>New York</td>
       <td>
-      </tr>
+        <img src="img/escrever (1).png">
+      </td>
+      <td>
+        <img src="img/lixeira-de-reciclagem.png">
+      </td>
+        </tr>
       <td>Wade</td>
       <td>Wilson</td>
       <td>DeadPool</td>
       <td>New York</td>
       <td>
-      </tr>
+        <img src="img/escrever (1).png">
+      </td>
+      <td>
+        <img src="img/lixeira-de-reciclagem.png">
+      </td>
+        </tr>
       <td>Bruce</td>
       <td>Wayne</td>
       <td>Batman</td>
       <td>Gotham City</td>
       <td>
-      <img src="img/escrever (1).png">
+        <img src="img/escrever (1).png">
       </td>
       <td>
-    <img src="img/lixeira-de-reciclagem.png">
-  </td>
-    </tr>
-    
+        <img src="img/lixeira-de-reciclagem.png">
+      </td>
+      </tr>
+
     </table>
   </div>
 
 
 
-  </body>
+</body>
+
 </html>
