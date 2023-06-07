@@ -5,22 +5,26 @@ const inputNome = document.getElementById("nome");
 const inputSobrenome = document.getElementById("sobrenome");
 const inputFantasia = document.getElementById("fantasia");
 const inputLocal = document.getElementById("local");
-let urlPadrao = "http://localhost:5269/api/Personagens";
+let urlPadrao = "http://localhost:5122/api/Personagens";
 
-function addNome(){
+function addNome() {
     nameHero = inputNome.value;
+    nameHero = nameHero[0].toUpperCase() + nameHero.substring(1).toLowerCase();
 }
 
 function addSobrenome(){
     surnameHero = inputSobrenome.value;
+    surnameHero = surnameHero[0].toUpperCase() + surnameHero.substring(1).toLowerCase();
 }
 
 function addFantasia(){
     fantasy = inputFantasia.value;
+    fantasy = fantasy[0].toUpperCase() + fantasy.substring(1).toLowerCase();
 }
 
 function addLocal(){
     locale = inputLocal.value;
+    locale = locale[0].toUpperCase() + locale.substring(1).toLowerCase();
 }
 
 formulario.addEventListener("submit", (evento) => {
@@ -68,15 +72,18 @@ const registrar = async () => {
         body: JSON.stringify(dadosFinais),
     };
 
-    fetch(urlPadrao, options)
+    await fetch(urlPadrao, options)
     .then((resp) =>{
-        resp.json()
+        return resp.json()
     })
     .then((dados) =>{
         reendeniza(dados);
     })
     .catch((error) =>{
         alert(error.toString());
+    })
+    .finally(()=>{
+        formulario.reset();
     })
 };
 
