@@ -1,95 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer text="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <form class="form">
+      <p class="title">Registar Personagem</p>
+      <p class="message">Insira os dados do héroi para cadastra-lo</p>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRUD</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer text="text/javascript" src="script.js"></script>
-</head>
+      <div class="flex">
+        <label>
+          <input
+            required
+            placeholder=""
+            type="text"
+            class="input"
+            style="width: 110px"
+            id="nome"
+            onchange="addNome()"
+          />
+          <span>Nome</span>
+        </label>
+        <label>
+          <input
+            required
+            placeholder=""
+            type="text"
+            class="input"
+            id="sobrenome"
+            onchange="addSobrenome()"
+          />
+          <span>Sobrenome</span>
+        </label>
+      </div>
 
-<body>
-  <form class="form">
-    <p class="title">Registrar personagem</p>
-    <p class="message">Insira os dados do héroi para cadastrá-lo</p>
-
-    <div class="flex">
       <label>
-        <input required placeholder="" type="text" class="input" style="width: 110px" id="nome" onchange="addNome()" />
-        <span>Nome</span>
-        <label> </label>
+        <input
+          required
+          placeholder=""
+          type="text"
+          class="input"
+          id="fantasia"
+          onchange="addFantasia()"
+        />
+        <span>Fantasia</span>
+      </label>
+      <label>
+        <input
+          required
+          placeholder=""
+          type="text"
+          class="input"
+          id="local"
+          onchange="addLocal()"
+        />
+        <span>Local</span>
       </label>
 
-      <label>
-        <input required placeholder="" type="text" class="input" style="width: 110px" id="sobrenome"
-          onchange="addSobrenome()" />
-        <span>Sobrenome</span>
-      </label>
+      <button class="submit" id="botao">Cadastrar</button>
+    </form>
+
+    <div class="tabela">
+      <p class="title" style="margin: 0">Tabela de Heróis</p>
+      <table id = "tabelaHerois">
+        
+      </table>
     </div>
-    <label>
-      <input required placeholder="" type="text" class="input" id="fantasia" onchange="addFantasia()" />
-      <span>Fantasia</span>
-    </label>
-    <label>
-      <input required placeholder="" type="text" class="input" id="local" onchange="addLocal()" />
-      <span>Local</span>
-    </label>
-
-    <button class="submit">Cadastrar</button>
-  </form>
-
-  <div class="tabela">
-    <p class="title" style="margin:0">Tabela de Heróis</p>
-    <table id="tabelaHerois">
-      <tr>
-        <th>Nome</th>
-        <th>Sobrenome</th>
-        <th>Fantasia</th>
-        <th>Local</th>
-        <th>Editar</th>
-        <th>Excluir</th>
-      </tr>
-      <td>Peter</td>
-      <td>Parker</td>
-      <td>Homem Aranha</td>
-      <td>New York</td>
-      <td>
-        <img src="img/escrever (1).png">
-      </td>
-      <td>
-        <img src="img/lixeira-de-reciclagem.png">
-      </td>
-        </tr>
-      <td>Wade</td>
-      <td>Wilson</td>
-      <td>DeadPool</td>
-      <td>New York</td>
-      <td>
-        <img src="img/escrever (1).png">
-      </td>
-      <td>
-        <img src="img/lixeira-de-reciclagem.png">
-      </td>
-        </tr>
-      <td>Bruce</td>
-      <td>Wayne</td>
-      <td>Batman</td>
-      <td>Gotham City</td>
-      <td>
-        <img src="img/escrever (1).png">
-      </td>
-      <td>
-        <img src="img/lixeira-de-reciclagem.png">
-      </td>
-      </tr>
-
-    </table>
-  </div>
-
-
-
-</body>
-
+  </body>
 </html>
